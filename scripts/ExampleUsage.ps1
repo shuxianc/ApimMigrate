@@ -5,7 +5,7 @@ $rootPath = "D:\workspace\APIM\export"
 # !!!Login to your source subscription first by Select-AzureRmSubscription!!!
 
 $sourceApimResourceGroup = 'Api-Default-West-US'
-$sourceApimServiceName = 'oxfordibiza'
+$sourceApimServiceName = 'YourSrcApimName'
 $sourceApimContext = New-AzureRmApiManagementContext -ResourceGroupName $sourceApimResourceGroup -ServiceName $sourceApimServiceName
 
 # Export all information from source APIM
@@ -16,7 +16,7 @@ Export-Apim -ApimResourceGroup $sourceApimResourceGroup -ApimServiceName $source
 # !!!Login to your sink subscription first by Select-AzureRmSubscription!!!
 
 $sinkApimResourceGroup = 'Api-Default-West-US'
-$sinkApimServiceName = 'oxfordppepaste'
+$sinkApimServiceName = 'YourSinkApimName'
 $sinkApimContext = New-AzureRmApiManagementContext -ResourceGroupName $sinkApimResourceGroup -ServiceName $sinkApimServiceName
 
 # Import all information to sink APIM
